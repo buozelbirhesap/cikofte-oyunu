@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cikofte-Oyunu"
-run/main_scene="uid://cs8j6eu80jokp"
+run/main_scene="uid://clts21tt0ua1w"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

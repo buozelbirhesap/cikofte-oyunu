@@ -3,23 +3,41 @@
 [ext_resource type="Texture2D" uid="uid://h5shosceutyo" path="res://karakterler/Sushi.png" id="2_7xvs6"]
 
 [sub_resource type="GDScript" id="GDScript_4vl58"]
+script/source = "extends RigidBody2D
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if (body.name == \"CharacterBody2D\"):
+		get_tree().reload_current_scene()
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh0mv"]
-radius = 4.857575
-height = 22.949242
+radius = 7.0353374
+height = 33.4938
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vl58"]
+size = Vector2(17.182106, 35.114883)
 
 [node name="Düsman" type="Node2D" unique_id=668093382]
 scale = Vector2(1.664847, 2.0041394)
 
-[node name="Area" type="RigidBody2D" parent="." unique_id=367645007]
+[node name="enemy" type="RigidBody2D" parent="." unique_id=367645007]
 script = SubResource("GDScript_4vl58")
 
-[node name="Sushi" type="Sprite2D" parent="Area" unique_id=149268860]
+[node name="Sushi" type="Sprite2D" parent="enemy" unique_id=149268860]
 position = Vector2(13.999985, -5.000061)
 scale = Vector2(0.084816135, 0.057753164)
 texture = ExtResource("2_7xvs6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=630007824]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=630007824]
 position = Vector2(14, -6)
 scale = Vector2(5.3524647, 1.1329349)
 shape = SubResource("CapsuleShape2D_nh0mv")
+
+[node name="Area2D" type="Area2D" parent="enemy" unique_id=1543453901]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="enemy/Area2D" unique_id=577921657]
+position = Vector2(16.217707, -6.486574)
+scale = Vector2(5.3524647, 1.1329349)
+shape = SubResource("RectangleShape2D_4vl58")
+
+[connection signal="body_entered" from="enemy/Area2D" to="enemy" method="_on_area_2d_body_entered"]
