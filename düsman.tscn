@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://yf7vuua4m0bv"]
+
+[ext_resource type="Texture2D" uid="uid://h5shosceutyo" path="res://karakterler/Sushi.png" id="2_7xvs6"]
+
+[sub_resource type="GDScript" id="GDScript_4vl58"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh0mv"]
+radius = 4.857575
+height = 22.949242
+
+[node name="Düsman" type="Node2D" unique_id=668093382]
+
+[node name="Area" type="RigidBody2D" parent="." unique_id=367645007]
+script = SubResource("GDScript_4vl58")
+
+[node name="Sushi" type="Sprite2D" parent="Area" unique_id=149268860]
+position = Vector2(13.999985, -5.000061)
+scale = Vector2(0.084816135, 0.057753164)
+texture = ExtResource("2_7xvs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=630007824]
+position = Vector2(14, -6)
+scale = Vector2(5.3524647, 1.1329349)
+shape = SubResource("CapsuleShape2D_nh0mv")
