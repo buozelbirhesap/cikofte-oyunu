@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj5cf6warsfxf"
-path="res://.godot/imported/urfalıusta.png-b1573a75cc204d6b86baf86c2b8155d0.ctex"
+uid="uid://beutk338mjdth"
+path="res://.godot/imported/1.png-5ac1959d6dff95acb765bddbbffc06d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://urfalıusta.png"
-dest_files=["res://.godot/imported/urfalıusta.png-b1573a75cc204d6b86baf86c2b8155d0.ctex"]
+source_file="res://yer/1.png"
+dest_files=["res://.godot/imported/1.png-5ac1959d6dff95acb765bddbbffc06d4.ctex"]
 
 [params]
 
