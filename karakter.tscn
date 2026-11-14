@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://das5vpfg05cxi"]
 
-[node name="Karakter" type="Node2D" unique_id=1466117632]
+[ext_resource type="Texture2D" uid="uid://bj5cf6warsfxf" path="res://karakterler/urfalıusta.png" id="1_41xbd"]
+[ext_resource type="Script" uid="uid://dyx3kap6jmp7l" path="res://hareket.gd" id="1_hsgpa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
+size = Vector2(445.46588, 1508.6365)
+
+[node name="Player" type="Node2D" unique_id=993160625]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1509884533]
+script = ExtResource("1_hsgpa")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1946232178]
+position = Vector2(-4.9999847, 84.00001)
+scale = Vector2(0.21887209, 0.18957523)
+texture = ExtResource("1_41xbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1890252652]
+position = Vector2(-3, 34)
+scale = Vector2(0.21887198, 0.18957517)
+shape = SubResource("RectangleShape2D_itwuj")
