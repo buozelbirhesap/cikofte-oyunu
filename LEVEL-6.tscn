@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="2_r3ovk"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_r3ovk"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_seimg"]
+[ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="5_ygj11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seimg"]
 texture = ExtResource("1_lwf1c")
@@ -782,6 +783,8 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5743373, 0.25122213, 0.45845038, 1)
 sources/0 = SubResource("TileSetAtlasSource_seimg")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_itwuj"]
+
 [node name="Node2D" type="Node2D" unique_id=268739250]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=702476502]
@@ -805,3 +808,12 @@ position = Vector2(-239, 515)
 [node name="Düsman3" parent="." unique_id=747089283 instance=ExtResource("4_seimg")]
 position = Vector2(163, 50)
 scale = Vector2(1.1448464, 1.6841395)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1516699207]
+position = Vector2(-85, 674)
+script = ExtResource("5_ygj11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=816790749]
+shape = SubResource("WorldBoundaryShape2D_itwuj")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
