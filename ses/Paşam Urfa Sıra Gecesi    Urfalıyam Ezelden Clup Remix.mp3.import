@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://damvqq8up0hv3"
+path="res://.godot/imported/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3-0f0329f61d8a4d1f06c37e998f0d9592.mp3str"
+
+[deps]
+
+source_file="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3"
+dest_files=["res://.godot/imported/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3-0f0329f61d8a4d1f06c37e998f0d9592.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
