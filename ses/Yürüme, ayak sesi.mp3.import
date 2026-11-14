@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deeicii7j6lnj"
+path="res://.godot/imported/Yürüme, ayak sesi.mp3-d273993434a3ae33735b36061aeb62c0.mp3str"
+
+[deps]
+
+source_file="res://ses/Yürüme, ayak sesi.mp3"
+dest_files=["res://.godot/imported/Yürüme, ayak sesi.mp3-d273993434a3ae33735b36061aeb62c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
