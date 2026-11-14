@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_lwf1c"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="2_r3ovk"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_r3ovk"]
+[ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_seimg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seimg"]
 texture = ExtResource("1_lwf1c")
@@ -793,3 +794,14 @@ position = Vector2(-976, 229)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=461920669]
 stream = ExtResource("3_r3ovk")
 autoplay = true
+
+[node name="Düsman" parent="." unique_id=668093382 instance=ExtResource("4_seimg")]
+position = Vector2(-632, 339)
+scale = Vector2(0.98484826, 1.1641395)
+
+[node name="Düsman2" parent="." unique_id=1860422959 instance=ExtResource("4_seimg")]
+position = Vector2(-239, 515)
+
+[node name="Düsman3" parent="." unique_id=747089283 instance=ExtResource("4_seimg")]
+position = Vector2(163, 50)
+scale = Vector2(1.1448464, 1.6841395)
