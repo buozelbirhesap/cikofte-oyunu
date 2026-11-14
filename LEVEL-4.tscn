@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_7gbxy"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="2_qpwhk"]
+[ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="3_e12rp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpwhk"]
 texture = ExtResource("1_7gbxy")
@@ -781,6 +782,8 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.24194857, 0.40930086, 0.50262666, 1)
 sources/0 = SubResource("TileSetAtlasSource_qpwhk")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_itwuj"]
+
 [node name="Node2D" type="Node2D" unique_id=1605866673]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=733767153]
@@ -789,3 +792,12 @@ tile_set = SubResource("TileSet_xkklh")
 
 [node name="Player" parent="." unique_id=993160625 instance=ExtResource("2_qpwhk")]
 position = Vector2(124, -135)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=40891373]
+position = Vector2(317, 328)
+script = ExtResource("3_e12rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2131508995]
+shape = SubResource("WorldBoundaryShape2D_itwuj")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
