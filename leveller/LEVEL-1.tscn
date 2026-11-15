@@ -791,10 +791,10 @@ terrain_set_0/terrain_0/color = Color(0.5944672, 0.24356309, 0.4012136, 1)
 sources/0 = SubResource("TileSetAtlasSource_e6di4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
-size = Vector2(142, 140)
+size = Vector2(162.99707, 149.38965)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh0mv"]
-size = Vector2(192.5, 153.5)
+size = Vector2(207.30957, 153.5)
 
 [node name="Node2D" type="Node2D" unique_id=1525071945]
 
@@ -833,18 +833,22 @@ position = Vector2(1312, 296)
 script = ExtResource("7_ie0lv")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1668870962]
-position = Vector2(-19.999985, -32)
-scale = Vector2(0.37210885, 0.40068492)
+position = Vector2(-5.6091156, 7.6565247)
+scale = Vector2(0.15616572, 0.14305143)
 texture = ExtResource("8_68j1i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1766346456]
-position = Vector2(-30, -33)
+position = Vector2(-11.203125, 8.332672)
+scale = Vector2(0.41967753, 0.35701716)
 shape = SubResource("RectangleShape2D_itwuj")
 
 [node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=74629363]
+position = Vector2(14.390868, 39.656525)
+scale = Vector2(0.41967753, 0.35701716)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=1755189443]
-position = Vector2(-33.25, -31.75)
+position = Vector2(-56.930176, -95.23352)
+scale = Vector2(0.99999994, 1.1753421)
 shape = SubResource("RectangleShape2D_nh0mv")
 debug_color = Color(0.78721005, 0.41625342, 0.31855384, 0.41960785)
 
