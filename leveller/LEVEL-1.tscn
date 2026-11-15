@@ -799,7 +799,7 @@ size = Vector2(207.30957, 153.5)
 
 [node name="Node2D2" type="Node2D" unique_id=1525071945]
 
-[node name="Label" type="Label" parent="." unique_id=349136379]
+[node name="uyarı" type="Label" parent="." unique_id=349136379]
 z_index = 4
 offset_left = 442.00003
 offset_top = 184.99998
@@ -807,6 +807,17 @@ offset_right = 586.0
 offset_bottom = 207.99998
 scale = Vector2(1.5547516, 2.6680725)
 text = "Suşilere dokunma!"
+
+[node name="Label2" type="Label" parent="." unique_id=1547941048]
+z_index = 4
+offset_left = 1080.0
+offset_top = 115.999985
+offset_right = 1276.0
+offset_bottom = 164.99998
+scale = Vector2(1.5547516, 2.6680725)
+text = "Malzemeleri alarak diğer 
+seviyeye geç!"
+horizontal_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120798688]
 
