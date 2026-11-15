@@ -867,6 +867,7 @@ offset_right = 116.42865
 offset_bottom = 136.6429
 scale = Vector2(0.143, 0.147)
 theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+theme_override_constants/line_spacing = -10
 text = "LEVEL 5
 Harika Çiğ Köfte Tarifi
 

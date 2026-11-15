@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cwdm6kf7hd52p"]
+[gd_scene format=4 uid="uid://b4dohifvehdq1"]
 
 [ext_resource type="Texture2D" uid="uid://bsxfeigu4j813" path="res://WhatsApp Image 2026-11-15 at 09.06.26 (1).jpeg" id="1_2ahw5"]
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_r78n6"]
@@ -868,6 +868,7 @@ offset_right = 116.42865
 offset_bottom = 136.6429
 scale = Vector2(0.143, 0.147)
 theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+theme_override_constants/line_spacing = -10
 text = "LEVEL 3
 Harika Çiğ Köfte Tarifi
 

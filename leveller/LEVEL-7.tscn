@@ -868,10 +868,13 @@ offset_right = 116.42865
 offset_bottom = 136.6429
 scale = Vector2(0.143, 0.14731678)
 theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+theme_override_constants/line_spacing = -10
 text = "LEVEL 7
 Harika Çiğ Köfte Tarifi
 
 Soğanı al🧅"
+vertical_alignment = 1
+autowrap_trim_flags = 128
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
