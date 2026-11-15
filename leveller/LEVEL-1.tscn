@@ -811,10 +811,11 @@ text = "Suşilere dokunma!"
 [node name="Label2" type="Label" parent="." unique_id=1547941048]
 z_index = 4
 offset_left = 1080.0
-offset_top = 115.999985
+offset_top = 116.0
 offset_right = 1276.0
-offset_bottom = 164.99998
+offset_bottom = 165.0
 scale = Vector2(1.5547516, 2.6680725)
+theme_override_constants/line_spacing = -5
 text = "Malzemeleri alarak diğer 
 seviyeye geç!"
 horizontal_alignment = 1
