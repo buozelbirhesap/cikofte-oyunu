@@ -1,19 +1,11 @@
-[gd_scene format=4 uid="uid://ddo1qpinudhby"]
+[gd_scene format=4 uid="uid://c0vah5ur33p2k"]
 
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_eabrd"]
 [ext_resource type="Texture2D" uid="uid://bpxc5ljs4fkqm" path="res://WhatsApp Image 2026-11-15 at 08.47.38.jpeg" id="1_lopm7"]
-[ext_resource type="Script" uid="uid://nfo80wwxvk0v" path="res://bulgur.gd" id="1_sjba8"]
-[ext_resource type="Texture2D" uid="uid://bohjfn0g3bxhv" path="res://malzemeler/Bulgur.png" id="2_3bf77"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="2_lp762"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_lp762"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_qw7p7"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="5_rlpuj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
-size = Vector2(14.427925, 30.494967)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
-size = Vector2(25.172115, 42.030563)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qw7p7"]
 texture = ExtResource("1_eabrd")
@@ -797,36 +789,10 @@ sources/0 = SubResource("TileSetAtlasSource_qw7p7")
 
 [node name="Node2D2" type="Node2D" unique_id=237837386]
 
-[node name="bulgur" type="RigidBody2D" parent="." unique_id=1561196047]
-position = Vector2(1816, -68.00001)
-script = ExtResource("1_sjba8")
-
-[node name="Sprite2D" type="Sprite2D" parent="bulgur" unique_id=992842251]
-z_index = 1
-position = Vector2(-5.803953, 12.27143)
-scale = Vector2(0.1551026, 0.17012325)
-texture = ExtResource("2_3bf77")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bulgur" unique_id=2118438678]
-position = Vector2(1.5, 15.500004)
-scale = Vector2(3.2575622, 2.5250065)
-shape = SubResource("RectangleShape2D_uj04i")
-
-[node name="Area2D" type="Area2D" parent="bulgur" unique_id=1632323553]
-position = Vector2(20.76172, 65.31561)
-scale = Vector2(3.2575629, 2.524984)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bulgur/Area2D" unique_id=1896230098]
-position = Vector2(-6.066284, -21.882261)
-scale = Vector2(0.9999996, 0.99999964)
-shape = SubResource("RectangleShape2D_p5viw")
-debug_color = Color(0.7568804, 0.43603376, 0.3614962, 0.41960785)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=788286680]
-visible = false
-modulate = Color(0.500095, 0.50009507, 0.500095, 1)
-position = Vector2(412, -659)
-scale = Vector2(5.7296195, 4.3237705)
+modulate = Color(0.49433076, 0.49433076, 0.4943307, 1)
+position = Vector2(719.8751, -102.93748)
+scale = Vector2(3.9514267, 3.1103997)
 texture = ExtResource("1_lopm7")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=468004594]

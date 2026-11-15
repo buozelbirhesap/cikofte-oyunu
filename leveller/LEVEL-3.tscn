@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cwdm6kf7hd52p"]
+[gd_scene format=4 uid="uid://b4dohifvehdq1"]
 
 [ext_resource type="Texture2D" uid="uid://bsxfeigu4j813" path="res://WhatsApp Image 2026-11-15 at 09.06.26 (1).jpeg" id="1_2ahw5"]
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_r78n6"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_erd56"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="4_qdkck"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="5_4w7bm"]
+[ext_resource type="Script" uid="uid://cqgr8rbvq2vb6" path="res://sumak.gd" id="7_ph832"]
+[ext_resource type="Texture2D" uid="uid://c1fjm61ckcokx" path="res://malzemeler/Sumak.png" id="8_ene5t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdkck"]
 texture = ExtResource("1_r78n6")
@@ -787,6 +789,12 @@ sources/0 = SubResource("TileSetAtlasSource_qdkck")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nh0mv"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkklh"]
+size = Vector2(142, 152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itbkh"]
+size = Vector2(149, 168)
+
 [node name="Node2D2" type="Node2D" unique_id=951355833]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1651760477]
@@ -820,6 +828,26 @@ shape = SubResource("WorldBoundaryShape2D_nh0mv")
 position = Vector2(-119, -122)
 
 [node name="Düsman2" parent="." unique_id=804957517 instance=ExtResource("5_4w7bm")]
-position = Vector2(649, -158)
+position = Vector2(589, -152)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2016664500]
+position = Vector2(884, -162)
+script = ExtResource("7_ph832")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1575249469]
+position = Vector2(7.9999847, -57.000008)
+scale = Vector2(0.32701156, 0.32553956)
+texture = ExtResource("8_ene5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=451850293]
+position = Vector2(5, -54)
+shape = SubResource("RectangleShape2D_xkklh")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=821184865]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=1588612646]
+position = Vector2(4.5, -54)
+shape = SubResource("RectangleShape2D_itbkh")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
