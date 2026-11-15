@@ -1,11 +1,19 @@
 [gd_scene format=4 uid="uid://lk5w82pgb2mx"]
 
+[ext_resource type="Script" uid="uid://caar2uvs67vti" path="res://leveller/durum.gd" id="1_5y68d"]
 [ext_resource type="Texture2D" uid="uid://d2fa8180giulo" path="res://WhatsApp Image 2026-11-15 at 12.32.59.jpeg" id="1_uvg5k"]
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="2_2hj8u"]
+[ext_resource type="Texture2D" uid="uid://dxuhnnarwjpmq" path="res://malzemeler/Dürüm.png" id="2_hcrmi"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="3_5y68d"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_hcrmi"]
 [ext_resource type="PackedScene" uid="uid://lox3cmpdbax5" path="res://jumppad.tscn" id="5_j7c4d"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="6_7o8uc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
+size = Vector2(186.5, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
+size = Vector2(217, 135.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_575th"]
 texture = ExtResource("2_2hj8u")
@@ -785,7 +793,28 @@ sources/0 = SubResource("TileSetAtlasSource_575th")
 
 [node name="Node2D" type="Node2D" unique_id=638177290]
 
+[node name="Durum" type="RigidBody2D" parent="." unique_id=1979505966]
+position = Vector2(4378, -538)
+script = ExtResource("1_5y68d")
+
+[node name="Dürüm" type="Sprite2D" parent="Durum" unique_id=1842524350]
+position = Vector2(1.0000038, 6.0000005)
+scale = Vector2(0.13598648, 0.13696286)
+texture = ExtResource("2_hcrmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Durum" unique_id=262430390]
+position = Vector2(17, -3)
+shape = SubResource("RectangleShape2D_uj04i")
+
+[node name="Area2D" type="Area2D" parent="Durum" unique_id=644359586]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Durum/Area2D" unique_id=509972287]
+position = Vector2(18.5, -10.25)
+shape = SubResource("RectangleShape2D_p5viw")
+debug_color = Color(0.7736719, 0.4231878, 0.35782677, 0.41960785)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729998860]
+visible = false
 position = Vector2(2385.875, -225.87508)
 scale = Vector2(8.543879, 8.321744)
 texture = ExtResource("1_uvg5k")
@@ -832,3 +861,5 @@ position = Vector2(3187, -326)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2140881273]
 stream = ExtResource("6_7o8uc")
 autoplay = true
+
+[connection signal="body_entered" from="Durum/Area2D" to="Durum" method="_on_area_2d_body_entered"]

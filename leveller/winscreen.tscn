@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://8b8uy7uvac7o"]
+
+[ext_resource type="Texture2D" uid="uid://d2fa8180giulo" path="res://WhatsApp Image 2026-11-15 at 12.32.59.jpeg" id="1_ehxyi"]
+[ext_resource type="Texture2D" uid="uid://bj5cf6warsfxf" path="res://karakterler/urfalıusta.png" id="2_pd04t"]
+[ext_resource type="Texture2D" uid="uid://dxuhnnarwjpmq" path="res://malzemeler/Dürüm.png" id="3_2gb7w"]
+
+[node name="Node2D" type="Node2D" unique_id=159648305]
+
+[node name="Label" type="Label" parent="." unique_id=1516116537]
+z_index = 1
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 358.0
+offset_top = 247.00002
+offset_right = 740.83057
+offset_bottom = 1015.7506
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.0391655, 4.35113)
+theme_override_font_sizes/font_size = 61
+text = "❤️"
+
+[node name="WhatsAppImage20261115At12_32_59" type="Sprite2D" parent="." unique_id=344943677]
+modulate = Color(0.62779766, 0.6002109, 0.56122017, 1)
+position = Vector2(594.25, 354.75)
+scale = Vector2(1.6265306, 1.5905077)
+texture = ExtResource("1_ehxyi")
+
+[node name="Urfalıusta" type="Sprite2D" parent="." unique_id=917790244]
+position = Vector2(256, 475)
+scale = Vector2(0.3474121, 0.33300784)
+texture = ExtResource("2_pd04t")
+
+[node name="Dürüm" type="Sprite2D" parent="." unique_id=1688199157]
+position = Vector2(841.99994, 477.99997)
+scale = Vector2(0.20759565, 0.36093226)
+texture = ExtResource("3_2gb7w")
+
+[node name="Label2" type="Label" parent="." unique_id=444704536]
+z_index = 2
+offset_left = 487.99997
+offset_top = 107.99999
+offset_right = 598.0
+offset_bottom = 131.0
+scale = Vector2(3.3192554, 8.027156)
+
+[node name="Label3" type="Label" parent="." unique_id=252202813]
+offset_left = 395.0
+offset_top = 72.0
+offset_right = 768.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 62
+text = "KAZANDINIZ!!"
