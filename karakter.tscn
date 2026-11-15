@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dyx3kap6jmp7l" path="res://hareket.gd" id="1_hsgpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
-size = Vector2(283.27063, 1440.062)
+size = Vector2(283.27063, 1329.288)
 
 [node name="Player" type="Node2D" unique_id=993160625]
 
@@ -17,9 +17,9 @@ scale = Vector2(0.21887209, 0.18957523)
 texture = ExtResource("1_41xbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1890252652]
-position = Vector2(2.0000007, 27.499998)
+position = Vector2(2.0000007, 38)
 scale = Vector2(0.21887198, 0.18957517)
 shape = SubResource("RectangleShape2D_itwuj")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1241186510]
-position = Vector2(61, -8)
+position = Vector2(18, 84)

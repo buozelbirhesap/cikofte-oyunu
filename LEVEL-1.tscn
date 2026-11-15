@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://clts21tt0ua1w"]
+[gd_scene format=4 uid="uid://berf4dkdtjgdk"]
 
 [ext_resource type="Texture2D" uid="uid://cdqqgymd0cuk" path="res://WhatsApp Image 2026-11-15 at 09.06.26.jpeg" id="1_f75ib"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="1_inaau"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="2_w2o1s"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_w2o1s"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_e6di4"]
+[ext_resource type="Script" uid="uid://doa3yiat07sss" path="res://biber.gd" id="7_ie0lv"]
+[ext_resource type="Texture2D" uid="uid://b4sw8jdmf3xvv" path="res://malzemeler/Biber.png" id="8_68j1i"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nh0mv"]
 distance = -51.0
@@ -788,6 +790,12 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5944672, 0.24356309, 0.4012136, 1)
 sources/0 = SubResource("TileSetAtlasSource_e6di4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
+size = Vector2(142, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh0mv"]
+size = Vector2(192.5, 153.5)
+
 [node name="Node2D" type="Node2D" unique_id=1525071945]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463111436]
@@ -820,4 +828,25 @@ autoplay = true
 [node name="Düsman" parent="." unique_id=668093382 instance=ExtResource("4_e6di4")]
 position = Vector2(519, 326)
 
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2118695660]
+position = Vector2(1312, 296)
+script = ExtResource("7_ie0lv")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1668870962]
+position = Vector2(-19.999985, -32)
+scale = Vector2(0.37210885, 0.40068492)
+texture = ExtResource("8_68j1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1766346456]
+position = Vector2(-30, -33)
+shape = SubResource("RectangleShape2D_itwuj")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=74629363]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=1755189443]
+position = Vector2(-33.25, -31.75)
+shape = SubResource("RectangleShape2D_nh0mv")
+debug_color = Color(0.78721005, 0.41625342, 0.31855384, 0.41960785)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
