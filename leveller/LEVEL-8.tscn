@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_hcrmi"]
 [ext_resource type="PackedScene" uid="uid://lox3cmpdbax5" path="res://jumppad.tscn" id="5_j7c4d"]
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="6_7o8uc"]
+[ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="9_hcrmi"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="10_j7c4d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
 size = Vector2(186.5, 120)
@@ -791,15 +793,18 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.65584743, 0.15907988, 0.39304176, 1)
 sources/0 = SubResource("TileSetAtlasSource_575th")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j7c4d"]
+
 [node name="Node2D" type="Node2D" unique_id=638177290]
 
 [node name="Durum" type="RigidBody2D" parent="." unique_id=1979505966]
 position = Vector2(4378, -538)
 script = ExtResource("1_5y68d")
 
-[node name="Dürüm" type="Sprite2D" parent="Durum" unique_id=1842524350]
-position = Vector2(1.0000038, 6.0000005)
-scale = Vector2(0.13598648, 0.13696286)
+[node name="Dürüm" type="Sprite2D" parent="Durum" unique_id=1867842477]
+z_index = 4
+position = Vector2(5, 10)
+scale = Vector2(0.13085757, 0.13720304)
 texture = ExtResource("2_hcrmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Durum" unique_id=262430390]
@@ -814,7 +819,6 @@ shape = SubResource("RectangleShape2D_p5viw")
 debug_color = Color(0.7736719, 0.4231878, 0.35782677, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729998860]
-visible = false
 position = Vector2(2385.875, -225.87508)
 scale = Vector2(8.543879, 8.321744)
 texture = ExtResource("1_uvg5k")
@@ -862,4 +866,38 @@ position = Vector2(3187, -326)
 stream = ExtResource("6_7o8uc")
 autoplay = true
 
+[node name="Area2D" type="Area2D" parent="." unique_id=591594409]
+position = Vector2(755, 502)
+script = ExtResource("9_hcrmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1589525619]
+shape = SubResource("WorldBoundaryShape2D_j7c4d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=1314213505]
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/CanvasLayer" unique_id=2139328568]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("10_j7c4d")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Area2D/CanvasLayer/TextureRect" unique_id=1361498202]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.143, 0.14731678)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+theme_override_constants/line_spacing = -10
+text = "LEVEL 8
+Harika Çiğ Köfte Tarifi
+
+DÜRÜMÜ TAMAMLA"
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
 [connection signal="body_entered" from="Durum/Area2D" to="Durum" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
