@@ -866,13 +866,15 @@ offset_left = 9.365169
 offset_top = 9.446097
 offset_right = 117.365166
 offset_bottom = 240.44609
-scale = Vector2(0.1999116, 0.092151895)
+scale = Vector2(0.143, 0.147)
 theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
 text = "LEVEL 2
-EFSANEVİ
-Çiğköfte Tarifi
---------
+Harika Çiğ Köfte Tarifi
+
+
 İsotu al🧂"
+visible_characters_behavior = 4
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

@@ -799,6 +799,15 @@ size = Vector2(207.30957, 153.5)
 
 [node name="Node2D2" type="Node2D" unique_id=1525071945]
 
+[node name="Label" type="Label" parent="." unique_id=349136379]
+z_index = 4
+offset_left = 442.00003
+offset_top = 184.99998
+offset_right = 586.0
+offset_bottom = 207.99998
+scale = Vector2(1.5547516, 2.6680725)
+text = "Suşilere dokunma!"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120798688]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=259936401]
@@ -815,12 +824,12 @@ offset_left = 8.428652
 offset_top = 9.64289
 offset_right = 116.42865
 offset_bottom = 136.6429
-scale = Vector2(0.20578961, 0.17167519)
+scale = Vector2(0.143, 0.147)
 theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
 text = "LEVEL 1
-EFSANEVİ
-Çiğköfte Tarifi
---------
+Harika Çiğ Köfte Tarifi
+
+
 Biberi al🌶"
 metadata/_edit_use_anchors_ = true
 
