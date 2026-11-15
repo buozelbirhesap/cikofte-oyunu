@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_okwwo"]
 [ext_resource type="Script" uid="uid://88fp7gqykbh5" path="res://leveller/mısır.gd" id="6_rxir3"]
 [ext_resource type="Texture2D" uid="uid://duslmunjhc60o" path="res://malzemeler/Mısır.png" id="7_1rlw8"]
+[ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="8_rxir3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr8yg"]
 texture = ExtResource("1_ebbna")
@@ -792,6 +793,8 @@ size = Vector2(70, 102)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itbkh"]
 size = Vector2(82, 118)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_itwuj"]
+
 [node name="Node2D" type="Node2D" unique_id=176347767]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=155277461]
@@ -838,4 +841,12 @@ shape = SubResource("RectangleShape2D_xkklh")
 position = Vector2(-30, -36)
 shape = SubResource("RectangleShape2D_itbkh")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=2036554846]
+position = Vector2(423, 555)
+script = ExtResource("8_rxir3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=550815032]
+shape = SubResource("WorldBoundaryShape2D_itwuj")
+
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
