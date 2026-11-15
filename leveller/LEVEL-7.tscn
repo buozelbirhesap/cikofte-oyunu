@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_lp762"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_qw7p7"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="5_rlpuj"]
+[ext_resource type="Script" uid="uid://dwrstndyqk0lw" path="res://leveller/Sogan.gd" id="7_sjba8"]
+[ext_resource type="Texture2D" uid="uid://cgavkj7d3ipji" path="res://malzemeler/Soğan.png" id="8_3bf77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qw7p7"]
 texture = ExtResource("1_eabrd")
@@ -787,6 +789,12 @@ sources/0 = SubResource("TileSetAtlasSource_qw7p7")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_itwuj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h7mn"]
+size = Vector2(86.14746, 64.31399)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
+size = Vector2(136.5294, 91.629585)
+
 [node name="Node2D2" type="Node2D" unique_id=237837386]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=788286680]
@@ -821,4 +829,25 @@ script = ExtResource("5_rlpuj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=877036802]
 shape = SubResource("WorldBoundaryShape2D_itwuj")
 
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1785595902]
+position = Vector2(1830, -39)
+script = ExtResource("7_sjba8")
+
+[node name="Soğan" type="Sprite2D" parent="RigidBody2D" unique_id=725672120]
+position = Vector2(-12.208349, -14.467829)
+scale = Vector2(0.12925777, 0.08746021)
+texture = ExtResource("8_3bf77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1091668476]
+position = Vector2(-8, -11)
+shape = SubResource("RectangleShape2D_7h7mn")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=1976164096]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=309432583]
+position = Vector2(-10, -11)
+shape = SubResource("RectangleShape2D_p5viw")
+debug_color = Color(0.8857092, 0.3191977, 0.24572015, 0.41960785)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

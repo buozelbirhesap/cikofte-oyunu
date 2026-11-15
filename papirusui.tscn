@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="1_5n3f4"]
 
+
 [node name="Control" type="Control" unique_id=1647480179]
 layout_mode = 3
 anchors_preset = 15
