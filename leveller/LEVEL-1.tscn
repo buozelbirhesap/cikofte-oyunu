@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_e6di4"]
 [ext_resource type="Script" uid="uid://doa3yiat07sss" path="res://biber.gd" id="7_ie0lv"]
 [ext_resource type="Texture2D" uid="uid://b4sw8jdmf3xvv" path="res://malzemeler/Biber.png" id="8_68j1i"]
+[ext_resource type="PackedScene" uid="uid://d1dakj1q6av6l" path="res://papirusui.tscn" id="9_gjrxo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nh0mv"]
 distance = -51.0
@@ -851,6 +852,13 @@ position = Vector2(-56.930176, -95.23352)
 scale = Vector2(0.99999994, 1.1753421)
 shape = SubResource("RectangleShape2D_nh0mv")
 debug_color = Color(0.78721005, 0.41625342, 0.31855384, 0.41960785)
+
+[node name="Control" parent="RigidBody2D/Area2D" unique_id=1647480179 instance=ExtResource("9_gjrxo")]
+offset_left = -3956.349
+offset_top = -875.74646
+offset_right = -3956.349
+offset_bottom = -875.74646
+scale = Vector2(3.1786058, 4.236354)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

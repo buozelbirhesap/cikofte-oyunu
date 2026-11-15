@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://blef8mxivtd5b"]
+
+[ext_resource type="Script" uid="uid://by04vmgb75cog" path="res://menu.gd" id="1_4hy44"]
+[ext_resource type="Texture2D" uid="uid://bsxfeigu4j813" path="res://WhatsApp Image 2026-11-15 at 09.06.26 (1).jpeg" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://bj5cf6warsfxf" path="res://karakterler/urfalıusta.png" id="2_mae5d"]
+[ext_resource type="Texture2D" uid="uid://dxuhnnarwjpmq" path="res://malzemeler/Dürüm.png" id="3_4hy44"]
+
+[sub_resource type="Gradient" id="Gradient_mae5d"]
+colors = PackedColorArray(0.9625793, 0.73013514, 0.5597735, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_itwuj"]
+gradient = SubResource("Gradient_mae5d")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sibxj"]
+bg_color = Color(0.81794804, 0.5156873, 0.3415719, 1)
+
+[node name="Menu" type="Control" unique_id=646924758]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hy44")
+
+[node name="OYUNABASLA" type="Button" parent="." unique_id=344323967]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -65.0
+offset_right = 164.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.90945804, 0.8459659, 0.9652731, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.2760652, 0.27606523, 0.27606523, 1)
+theme_override_font_sizes/font_size = 35
+text = "OYUNA BAŞLA!"
+
+[node name="Arkaplan" type="Node" parent="." unique_id=1368589260]
+
+[node name="WhatsAppImage20261115At09_06_26(1)" type="Sprite2D" parent="Arkaplan" unique_id=732493062]
+modulate = Color(0.6288588, 0.62885886, 0.6288588, 1)
+self_modulate = Color(0.42595553, 0.42595553, 0.4259555, 1)
+position = Vector2(588, 336)
+scale = Vector2(1.6141304, 1.4653062)
+texture = ExtResource("1_lti8b")
+
+[node name="Urfalıusta" type="Sprite2D" parent="Arkaplan" unique_id=1270615171]
+self_modulate = Color(0.42595553, 0.42595553, 0.4259555, 1)
+position = Vector2(169, 606.00006)
+rotation = -0.23743714
+scale = Vector2(0.38623047, 0.3955078)
+texture = ExtResource("2_mae5d")
+
+[node name="Dürüm" type="Sprite2D" parent="Arkaplan" unique_id=1323402425]
+self_modulate = Color(0.42595553, 0.42595553, 0.4259555, 1)
+position = Vector2(1004, 110)
+scale = Vector2(0.19424936, 0.18920152)
+texture = ExtResource("3_4hy44")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=617321002]
+z_index = 1
+position = Vector2(594, 315.00003)
+scale = Vector2(3.230469, 467.25)
+texture = SubResource("GradientTexture1D_itwuj")
+
+[node name="Ad" type="Label" parent="." unique_id=1802815136]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -207.0
+offset_right = 473.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6427179, 0.64808667)
+theme_override_colors/font_color = Color(0.58396316, 0.33430275, 0.1942057, 1)
+theme_override_colors/font_shadow_color = Color(0.32818234, 0.13114157, 0.035024315, 1)
+theme_override_colors/font_outline_color = Color(0.77720803, 0.5491278, 0.5313811, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxFlat_sibxj")
+text = "Mehmet Usta Çiğ Köfte Diyarında"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="OYUNABASLA" to="." method="_on_oyunabasla_pressed"]

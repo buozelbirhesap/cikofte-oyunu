@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d1dakj1q6av6l"]
+
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="1_5n3f4"]
+
+[node name="Control" type="Control" unique_id=1647480179]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Papirus" type="Sprite2D" parent="." unique_id=1937373762]
+position = Vector2(2, 3.9999847)
+scale = Vector2(0.049924854, 0.050983638)
+texture = ExtResource("1_5n3f4")
