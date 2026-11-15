@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bc7obysrq5ce"]
 
 [ext_resource type="Texture2D" uid="uid://cdqqgymd0cuk" path="res://WhatsApp Image 2026-11-15 at 09.06.26.jpeg" id="1_f75ib"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="1_gjrxo"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="1_inaau"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="1_kd7u0"]
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="2_w2o1s"]
@@ -8,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_e6di4"]
 [ext_resource type="Script" uid="uid://doa3yiat07sss" path="res://biber.gd" id="7_ie0lv"]
 [ext_resource type="Texture2D" uid="uid://b4sw8jdmf3xvv" path="res://malzemeler/Biber.png" id="8_68j1i"]
-[ext_resource type="PackedScene" uid="uid://d1dakj1q6av6l" path="res://papirusui.tscn" id="9_gjrxo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nh0mv"]
 distance = -51.0
@@ -799,6 +799,31 @@ size = Vector2(207.30957, 153.5)
 
 [node name="Node2D2" type="Node2D" unique_id=1525071945]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120798688]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=259936401]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("1_gjrxo")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=120548609]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 1
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Biberi al🌶"
+metadata/_edit_use_anchors_ = true
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463111436]
 modulate = Color(0.54178685, 0.5417869, 0.54178685, 1)
 position = Vector2(763.43744, 95.499954)
@@ -852,13 +877,6 @@ position = Vector2(-56.930176, -95.23352)
 scale = Vector2(0.99999994, 1.1753421)
 shape = SubResource("RectangleShape2D_nh0mv")
 debug_color = Color(0.78721005, 0.41625342, 0.31855384, 0.41960785)
-
-[node name="Control" parent="RigidBody2D/Area2D" unique_id=1647480179 instance=ExtResource("9_gjrxo")]
-offset_left = -3956.349
-offset_top = -875.74646
-offset_right = -3956.349
-offset_bottom = -875.74646
-scale = Vector2(3.1786058, 4.236354)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

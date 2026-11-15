@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_pe4hw"]
 [ext_resource type="Script" uid="uid://ba0c2m5ri0jke" path="res://leveller/salca.gd" id="6_l7on6"]
 [ext_resource type="Texture2D" uid="uid://jl5lfr172q1u" path="res://malzemeler/Salça.png" id="7_80dfh"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="8_80dfh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpwhk"]
 texture = ExtResource("1_7gbxy")
@@ -838,6 +839,30 @@ shape = SubResource("RectangleShape2D_uj04i")
 position = Vector2(-11.5, -67)
 shape = SubResource("RectangleShape2D_p5viw")
 debug_color = Color(0.8370466, 0.34454554, 0.46832293, 0.41960785)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1171418088]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1782239566]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("8_80dfh")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=1463471689]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 4
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Salçayı al🍾"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

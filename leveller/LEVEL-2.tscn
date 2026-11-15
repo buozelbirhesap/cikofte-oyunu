@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="5_k1tpx"]
 [ext_resource type="Script" uid="uid://dvj57v45g7e4n" path="res://isot.gd" id="7_odn1v"]
 [ext_resource type="Texture2D" uid="uid://wl20w75yg1ci" path="res://malzemeler/İsot.png" id="8_4gbox"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="9_wlw56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wh1m8"]
 texture = ExtResource("1_h80ch")
@@ -848,6 +849,30 @@ shape = SubResource("RectangleShape2D_xkklh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=1233741090]
 position = Vector2(6, -36.5)
 shape = SubResource("RectangleShape2D_itbkh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1770774528]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=295340969]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("9_wlw56")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=174314495]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 2
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+İsotu al🧂"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

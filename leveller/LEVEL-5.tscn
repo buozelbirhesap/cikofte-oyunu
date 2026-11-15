@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://88fp7gqykbh5" path="res://leveller/mısır.gd" id="6_rxir3"]
 [ext_resource type="Texture2D" uid="uid://duslmunjhc60o" path="res://malzemeler/Mısır.png" id="7_1rlw8"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="8_rxir3"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="9_1rlw8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr8yg"]
 texture = ExtResource("1_ebbna")
@@ -847,6 +848,30 @@ script = ExtResource("8_rxir3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=550815032]
 shape = SubResource("WorldBoundaryShape2D_itwuj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=1599673828]
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/CanvasLayer" unique_id=30550071]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("9_1rlw8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Area2D/CanvasLayer/TextureRect" unique_id=846624835]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 5
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Mısırı al🌽"
 
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="5_ygj11"]
 [ext_resource type="Script" uid="uid://dww5r33u2nuu5" path="res://lavaş.gd" id="7_am0mc"]
 [ext_resource type="Texture2D" uid="uid://bmql68chw7lp4" path="res://malzemeler/Lavaş.png" id="8_lgumk"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="9_lp0mb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seimg"]
 texture = ExtResource("1_lwf1c")
@@ -850,6 +851,30 @@ position = Vector2(380.10257, 80.42564)
 rotation = 0.57111466
 scale = Vector2(0.121689215, 0.089089714)
 texture = ExtResource("8_lgumk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1574331803]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1007389811]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("9_lp0mb")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=1323438502]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 6
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Lavaşı al🥖"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

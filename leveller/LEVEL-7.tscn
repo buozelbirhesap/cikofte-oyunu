@@ -6,8 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://damvqq8up0hv3" path="res://ses/Paşam Urfa Sıra Gecesi    Urfalıyam Ezelden Clup Remix.mp3" id="3_lp762"]
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="4_qw7p7"]
 [ext_resource type="Script" uid="uid://dovyyqjp75p4m" path="res://fall-area.gd" id="5_rlpuj"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dwrstndyqk0lw" path="res://leveller/Sogan.gd" id="7_sjba8"]
 [ext_resource type="Texture2D" uid="uid://cgavkj7d3ipji" path="res://malzemeler/Soğan.png" id="8_3bf77"]
+=======
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="7_wid04"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qw7p7"]
 texture = ExtResource("1_eabrd")
@@ -829,6 +833,7 @@ script = ExtResource("5_rlpuj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=877036802]
 shape = SubResource("WorldBoundaryShape2D_itwuj")
 
+<<<<<<< Updated upstream
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1785595902]
 position = Vector2(1830, -39)
 script = ExtResource("7_sjba8")
@@ -848,6 +853,31 @@ shape = SubResource("RectangleShape2D_7h7mn")
 position = Vector2(-10, -11)
 shape = SubResource("RectangleShape2D_p5viw")
 debug_color = Color(0.8857092, 0.3191977, 0.24572015, 0.41960785)
+=======
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1788682359]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=461704945]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("7_wid04")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=318546141]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 7
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Soğanı al🧅"
+>>>>>>> Stashed changes
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]

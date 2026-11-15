@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://b4dohifvehdq1"]
+[gd_scene format=4 uid="uid://cwdm6kf7hd52p"]
 
 [ext_resource type="Texture2D" uid="uid://bsxfeigu4j813" path="res://WhatsApp Image 2026-11-15 at 09.06.26 (1).jpeg" id="1_2ahw5"]
 [ext_resource type="Texture2D" uid="uid://dvsjx4qm8xinm" path="res://yer/5.png" id="1_r78n6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://yf7vuua4m0bv" path="res://düsman.tscn" id="5_4w7bm"]
 [ext_resource type="Script" uid="uid://cqgr8rbvq2vb6" path="res://sumak.gd" id="7_ph832"]
 [ext_resource type="Texture2D" uid="uid://c1fjm61ckcokx" path="res://malzemeler/Sumak.png" id="8_ene5t"]
+[ext_resource type="Texture2D" uid="uid://d4j480wkev4t8" path="res://karakterler/Papirus.png" id="9_b87ni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdkck"]
 texture = ExtResource("1_r78n6")
@@ -848,6 +849,30 @@ shape = SubResource("RectangleShape2D_xkklh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=1588612646]
 position = Vector2(4.5, -54)
 shape = SubResource("RectangleShape2D_itbkh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=997164524]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1602454517]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.271146, 5.081464)
+texture = ExtResource("9_b87ni")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=1149406286]
+layout_mode = 0
+offset_left = 8.428652
+offset_top = 9.64289
+offset_right = 116.42865
+offset_bottom = 136.6429
+scale = Vector2(0.20578961, 0.17167519)
+theme_override_colors/font_color = Color(0.35340464, 0.13290647, 0.008136022, 1)
+text = "LEVEL 3
+EFSANEVİ
+Çiğköfte Tarifi
+--------
+Sumakı al🍶"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
