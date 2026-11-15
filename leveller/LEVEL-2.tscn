@@ -799,8 +799,8 @@ size = Vector2(130, 151)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1550848028]
 modulate = Color(0.4506483, 0.4506483, 0.45064825, 1)
-position = Vector2(660.0001, 195.24995)
-scale = Vector2(3.4538043, 2.908811)
+position = Vector2(719.4998, 182.99994)
+scale = Vector2(4.7404885, 4.2540984)
 texture = ExtResource("1_sgpwk")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1994972202]

@@ -797,8 +797,9 @@ size = Vector2(119, 148)
 [node name="Node2D" type="Node2D" unique_id=1605866673]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=558461115]
-position = Vector2(1244, -227)
-scale = Vector2(4.2395163, 3.573036)
+modulate = Color(0.64739496, 0.647395, 0.6473949, 1)
+position = Vector2(834.9999, -69.49991)
+scale = Vector2(6.993548, 6.1194444)
 texture = ExtResource("1_a4j8x")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=733767153]

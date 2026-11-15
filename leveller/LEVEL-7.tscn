@@ -791,8 +791,8 @@ sources/0 = SubResource("TileSetAtlasSource_qw7p7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=788286680]
 modulate = Color(0.49433076, 0.49433076, 0.4943307, 1)
-position = Vector2(719.8751, -102.93748)
-scale = Vector2(3.9514267, 3.1103997)
+position = Vector2(780.99976, -149.49991)
+scale = Vector2(6.896738, 6.219262)
 texture = ExtResource("1_lopm7")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=468004594]
