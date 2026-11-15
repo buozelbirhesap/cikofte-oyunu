@@ -2,6 +2,30 @@
 
 [ext_resource type="Texture2D" uid="uid://bj5cf6warsfxf" path="res://karakterler/urfalıusta.png" id="1_41xbd"]
 [ext_resource type="Script" uid="uid://dyx3kap6jmp7l" path="res://hareket.gd" id="1_hsgpa"]
+[ext_resource type="Texture2D" uid="uid://dwcm3xt0bmdsq" path="res://karakterler/walk1.png" id="3_hf6fp"]
+[ext_resource type="Texture2D" uid="uid://vq6wxg1841oo" path="res://karakterler/walk2.png" id="4_ys875"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itwuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_41xbd")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hf6fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ys875")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
 size = Vector2(283.27063, 1329.288)
@@ -11,10 +35,12 @@ size = Vector2(283.27063, 1329.288)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1509884533]
 script = ExtResource("1_hsgpa")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1946232178]
+[node name="animatedsprite" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1362354227]
 position = Vector2(-4.9999847, 84.00001)
 scale = Vector2(0.21887209, 0.18957523)
-texture = ExtResource("1_41xbd")
+sprite_frames = SubResource("SpriteFrames_itwuj")
+animation = &"idle"
+frame_progress = 0.69299537
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1890252652]
 position = Vector2(2.0000007, 38)
