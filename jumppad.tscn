@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://lox3cmpdbax5"]
 
 [ext_resource type="Script" uid="uid://boaky1tulougx" path="res://jumppad.gd" id="1_ai465"]
-[ext_resource type="Texture2D" uid="uid://daneb3yaimqp6" path="res://yer/jumppad.png" id="2_s47m4"]
+[ext_resource type="Texture2D" uid="uid://duh0pdobwl7uj" path="res://yer/9468.png" id="2_ai465"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itwuj"]
 size = Vector2(85, 15)
@@ -12,10 +12,10 @@ size = Vector2(85, 14)
 [node name="jumppad" type="Node2D" unique_id=1820765712]
 script = ExtResource("1_ai465")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1525908797]
-position = Vector2(0, -4.7683716e-07)
-scale = Vector2(0.07812501, 0.10424802)
-texture = ExtResource("2_s47m4")
+[node name="9468" type="Sprite2D" parent="." unique_id=567472630]
+position = Vector2(-4.9374995, 0)
+scale = Vector2(0.07806397, 0.120269775)
+texture = ExtResource("2_ai465")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=52201690]
 
