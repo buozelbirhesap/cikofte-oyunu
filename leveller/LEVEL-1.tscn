@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://berf4dkdtjgdk"]
+[gd_scene format=4 uid="uid://bc7obysrq5ce"]
 
 [ext_resource type="Texture2D" uid="uid://cdqqgymd0cuk" path="res://WhatsApp Image 2026-11-15 at 09.06.26.jpeg" id="1_f75ib"]
 [ext_resource type="PackedScene" uid="uid://das5vpfg05cxi" path="res://karakter.tscn" id="1_inaau"]
@@ -796,7 +796,7 @@ size = Vector2(142, 140)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh0mv"]
 size = Vector2(192.5, 153.5)
 
-[node name="Node2D" type="Node2D" unique_id=1525071945]
+[node name="Node2D2" type="Node2D" unique_id=1525071945]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463111436]
 modulate = Color(0.54178685, 0.5417869, 0.54178685, 1)
